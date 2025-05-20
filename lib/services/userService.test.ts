@@ -138,7 +138,7 @@ describe('userService', () => {
       const department = sampleUser.department || 'Unknown';
 
       // Check if the user's name maps to their postal code
-      const nameKey = `${sampleUser.firstName} ${sampleUser.lastName}`;
+      const nameKey = `${sampleUser.firstName}${sampleUser.lastName}`;
 
       if (summary[department]) {
         expect(summary[department].addressUser[nameKey]).toBe(sampleUser.address.postalCode);
