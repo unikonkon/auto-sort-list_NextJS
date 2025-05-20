@@ -1,9 +1,20 @@
-# Auto-Sort List
+## Auto-Sort List Use Next.js 15 application Auto-Sort List And API users summary
 
-A Next.js 15 application Auto-Sort List And API users summary
+use hosting in vercel
+
+### 1. Auto Delete Todo List 
+Answer:
+
+Domain -> https://auto-sort-list.vercel.app/
+
+### 2. Create data from API *(OPTIONAL)*
+Answer:
+
+api ที่ สร้าง Result response -> https://auto-sort-list.vercel.app/api/summary
+
+page ที่ใช้ api แสดงผล response -> https://auto-sort-list.vercel.app/users
 
 # Assignment
-
 ## 1. Auto Delete Todo List
 
 ```
