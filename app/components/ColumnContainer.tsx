@@ -10,9 +10,9 @@ interface ColumnContainerProps {
   onResetAll: () => void;
 }
 
-const ColumnContainer: React.FC<ColumnContainerProps> = ({ 
-  title, 
-  items, 
+const ColumnContainer: React.FC<ColumnContainerProps> = ({
+  title,
+  items,
   onItemClick,
   showResetButton,
   onResetAll
@@ -22,7 +22,7 @@ const ColumnContainer: React.FC<ColumnContainerProps> = ({
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold text-center">{title} List</h2>
         {showResetButton && (
-          <button 
+          <button
             className="px-2 py-1 text-sm bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors"
             onClick={onResetAll}
           >
@@ -30,16 +30,20 @@ const ColumnContainer: React.FC<ColumnContainerProps> = ({
           </button>
         )}
       </div>
-      
+
       <div className="space-y-2 flex-grow">
         {items.length > 0 ? (
           items.map((item, index) => (
-            <ItemCard
+            <div
               key={`${item.name}-${index}`}
-              item={item}
-              currentColumn={title}
-              onItemClick={onItemClick}
-            />
+            // className="animate-fade-in"
+            >
+              <ItemCard
+                item={item}
+                currentColumn={title}
+                onItemClick={onItemClick}
+              />
+            </div>
           ))
         ) : (
           <p className="text-gray-500 dark:text-gray-400 text-center italic">
